@@ -1,0 +1,71 @@
+.footer {
+  background: var(--color-surface-dark);
+  border-top: 1px solid var(--color-border-dark);
+  padding: var(--space-16) 0 var(--space-8);
+  color: var(--color-text-on-dark-2);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  color: var(--color-text-on-dark);
+  display: inline-block;
+  margin-bottom: var(--space-3);
+}
+.logoAccent { color: var(--color-emerald); }
+.brandDesc {
+  font-size: 13px;
+  color: var(--color-text-on-dark-2);
+  max-width: 260px;
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+}
+.socials { display: flex; gap: var(--space-2); }
+.socialIcon {
+  width: 34px; height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-dark);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-on-dark-2);
+  text-decoration: none;
+  transition: border-color var(--dur-200), color var(--dur-200);
+}
+@media (hover: hover) {
+  .socialIcon:hover { border-color: var(--color-emerald); color: var(--color-emerald); }
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.linkList { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.link {
+  font-size: 13px;
+  color: var(--color-text-on-dark-2);
+  text-decoration: none;
+  transition: color var(--dur-200);
+}
+@media (hover: hover) { .link:hover { color: var(--color-text-on-dark); } }
+
+.bottom {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-dark);
+  font-size: 12px;
+  color: rgba(255,255,255,.3);
+}
