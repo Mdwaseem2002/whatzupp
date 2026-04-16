@@ -52,11 +52,15 @@ export default function Navbar() {
             What<span className={styles.logoAccent}>Zupp</span>
           </Link>
 
-          <ul className={styles.links} role="list">
+          <ul className={styles.swipeMaskNav} role="list">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className={`${styles.link} ${activeSection === l.href.slice(1) ? styles.linkActive : ''}`}>
-                  {l.label}
+                <a 
+                  href={l.href} 
+                  className={`${styles.swipeMaskLink} ${activeSection === l.href.slice(1) ? styles.swipeMaskLinkActive : ''}`}
+                >
+                  <span className={styles.swipeMaskText}>{l.label}</span>
+                  <span className={styles.swipeMaskMask} />
                 </a>
               </li>
             ))}

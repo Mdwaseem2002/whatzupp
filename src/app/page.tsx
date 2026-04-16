@@ -6,6 +6,7 @@ import Benefits  from '@/components/home/Benefits';
 import HowItWorks from '@/components/home/HowItWorks';
 import UseCases  from '@/components/home/UseCases';
 import Analytics from '@/components/home/Analytics';
+import WhatzupAsk from '@/components/home/WhatzupAsk';
 import CtaBanner from '@/components/home/CtaBanner';
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
         <HowItWorks />
         <UseCases />
         <Analytics />
+        <WhatzupAsk />
         <CtaBanner />
       </main>
       <Footer />

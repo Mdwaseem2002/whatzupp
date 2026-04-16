@@ -44,6 +44,68 @@
 }
 @media (min-width: 900px) { .links { display: flex; } }
 
+/* Swipe Mask Nav Styles */
+.swipeMaskNav {
+  display: none;
+  list-style: none;
+  gap: 0;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  padding: 4px;
+  background: var(--color-surface-raised);
+  backdrop-filter: blur(10px);
+}
+@media (min-width: 900px) { .swipeMaskNav { display: flex; } }
+
+.swipeMaskLink {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1.4rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  text-decoration: none;
+  transition: all var(--dur-300);
+}
+
+.swipeMaskText {
+  position: relative;
+  z-index: 10;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  transition: color var(--dur-500);
+  pointer-events: none;
+}
+
+.swipeMaskMask {
+  position: absolute;
+  inset: 0;
+  background: var(--color-text-primary);
+  transform: translateY(100%);
+  transition: transform var(--dur-300) var(--ease-out);
+  border-radius: var(--radius-full);
+}
+
+@media (hover: hover) {
+  .swipeMaskLink:hover .swipeMaskText {
+    color: var(--color-bg);
+  }
+  .swipeMaskLink:hover .swipeMaskMask {
+    transform: translateY(0);
+  }
+}
+
+.swipeMaskLinkActive .swipeMaskText {
+  color: var(--color-bg);
+}
+
+.swipeMaskLinkActive .swipeMaskMask {
+  transform: translateY(0);
+}
+
 .link {
   font-family: var(--font-body);
   font-size: 13px;
